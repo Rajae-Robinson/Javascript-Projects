@@ -1,0 +1,47 @@
+ /* Lato font */
+@import url('https://fonts.googleapis.com/css?family=Lato:300&display=swap');
+
+*,*::after, *::before {
+    box-sizing: border-box;
+    font-family: 'Lato',sans-serif;
+}
+
+html, body {
+    background-image: linear-gradient(to right, #141414, #000);
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; 
+}
+
+/* ----- keys -------- */
+.key {
+    font-weight: 700;
+    text-align: center;
+    background-color: #9b9b8d;
+    padding: 2rem;
+    margin: 1rem;
+    border: 2px solid rgb(240, 238, 238);
+    border-radius: 10px;
+    transition: all 0.07s ease;
+}
+
+.key > kbd {
+    color: white;
+    text-shadow: 0 0 10px black;
+}
+
+.key > div {
+    color: rgb(255, 230, 0);
+}
+
+.highlight {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px 1px rgb(255, 230, 0);
+}

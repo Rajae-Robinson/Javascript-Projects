@@ -1,0 +1,112 @@
+/* Raleway Font */
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap');
+
+*,*::before,*::after {
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+html, body, .container {
+    height: 100%;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.num {
+    --rotation: 0;
+    position: absolute;
+    font-size: 2em;
+    font-weight: 700;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transform: rotate(var(--rotation));
+}
+
+.upright {
+    --rotateUp: 0;
+    transform: rotate(var(--rotateUp));
+}
+
+.clock-face {
+    position: relative;
+    height: 400px;
+    width: 400px;
+    background-color: #f1f1f1;
+    border: 3px solid black; 
+    border-radius: 50%;
+}
+
+/* placing each number in position */
+.one { --rotation: 30deg; }
+.two { --rotation: 60deg; }
+.three { --rotation: 90deg; }
+.four { --rotation: 120deg; }
+.five { --rotation: 150deg; }
+.six { --rotation: 180deg; }
+.seven { --rotation: 210deg; }
+.eight { --rotation: 240deg; }
+.nine { --rotation: 270deg; }
+.ten { --rotation: 300deg; }
+.eleven { --rotation: 330deg; }
+
+/* rotating numbers to make upright */
+.one .upright { --rotateUp: -30deg; }
+.two .upright { --rotateUp: -60deg; }
+.three .upright { --rotateUp: -90deg; }
+.four .upright { --rotateUp: -120deg; }
+.five .upright { --rotateUp: -150deg; }
+.six .upright { --rotateUp: -180deg; }
+.seven .upright { --rotateUp: -210deg; }
+.eight .upright { --rotateUp: -240deg; }
+.nine .upright { --rotateUp: -270deg; }
+.ten .upright { --rotateUp: -300deg; }
+.eleven .upright { --rotateUp: -330deg; }
+
+.hand {
+    position: absolute;
+    background-color: #000;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    transform-origin: bottom;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%);
+}
+
+/* circle at center of clock */
+.clock-face::after {
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    top: 50%;
+    left: 50%;
+    background-color: #000;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.minute-hand {
+    width: 5px;
+    height: 45%;
+    margin-top: -45%;
+}
+
+.hour-hand {
+    width: 8px;
+    height: 25%;
+    margin-top: -25%;
+}
+
+.seconds-hand {
+    width: 2px;
+    height: 45%;
+    background-color: #f00;
+    margin-top: -45%;
+}

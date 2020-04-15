@@ -1,0 +1,85 @@
+/* Roboto Font */
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
+*,*::after,*::before {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+html, body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator {
+    display: flex;
+    flex-flow: column wrap;
+    min-height: 500px;
+    min-width: 300px;
+    padding: 20px;
+    background-color: rgba(71, 75, 128, 0.788);
+    border-radius: 20px;
+    box-shadow: 0 0 8px 0px rgba(0,0,0,0.75);
+}
+
+.screen {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 5px;
+    border-radius: 10px;
+    width: 100%;
+    background-color: #f1f1f1;
+    flex: 1;
+}
+
+/* ------ buttons ------- */
+.btns {
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+    margin-top: 20px;
+}
+
+.btns button {
+    background-color: rgba(37, 40, 77, 0.788);
+    color: white;
+    font-size: 18px;
+    border: 0;
+    border-radius: 5px;
+    height: 3em;
+    margin: 2px;
+}
+
+.btns > div {
+    display: flex;
+    flex: 1;
+}
+
+.btns > div > button {
+    flex: 1;
+}
+
+.btns button:hover {
+    cursor: pointer;
+}
+
+/* all clear button */
+.btns > div:first-child > button:first-child {
+    background-color: #aa2a2a;
+}
+
+/* equals button */
+.btns > div:last-child .equals {
+    flex: 2;
+    background-color: #208620;
+}

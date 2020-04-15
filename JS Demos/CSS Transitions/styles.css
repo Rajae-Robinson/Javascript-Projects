@@ -1,0 +1,58 @@
+* {
+    box-sizing: border-box;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.btn {
+    border: 0;
+    color: white;
+    border-radius: 5px;
+    width: 100px;
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+.btn-green {
+    transition: width 3s ease-out;
+    background-color: rgb(28, 223, 28);
+}
+
+.btn-red {
+    transition: all 0.5s; /* all - specificies all properties */
+    background-color: red;
+}
+
+.btn-blue {
+    transition: all 0.5s;
+    background-color: blue;
+}
+
+.btn-green:hover {
+    width: 200px;
+}
+
+.btn-red:hover {
+    transform: scale(1.1);
+}
+
+.btn-blue:hover {
+    transform: scale(1.1);
+    background-color: rgb(92, 92, 219);
+}
+
+/* transition-timing-function
+ease-in will start the animation slowly, and finish at full speed.
+ease-out will start the animation at full speed, then finish slowly.
+ease-in-out will start slowly, be fastest at the middle of the animation, then finish slowly.
+ease is like ease-in-out, except it starts slightly faster than it ends.
+linear uses no easing. */
+
